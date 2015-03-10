@@ -22,7 +22,7 @@
 			To create a more customized searchView for Android, we are creating a custom view that ties back to the listView
 			through the onChange event.
 		-->
-		<View platform="android" class="size hgroup">
+		<View platform="android,windows" class="size hgroup">
 			<Label class="icon icon-search left-buffer" />
 			<TextField id="searchBar" class="search" onChange="onSearchChange" />
 			<Label id="closeBtn" class="icon-close right-buffer" onClick="onSearchCancel" />
