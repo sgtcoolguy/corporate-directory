@@ -116,7 +116,7 @@ function init(){
 
 			 var sectionHeader = Ti.UI.createView({
 			 	backgroundColor: "#ececec",
-			 	width: Ti.UI.FIll,
+			 	width: Ti.UI.FILL,
 			 	height: 30
 			 });
 
@@ -368,7 +368,7 @@ if(OS_IOS){
 		$.searchBar.blur();
 	};
 }
-else if(OS_ANDROID){
+else if(OS_ANDROID || OS_WINDOWS){
 	/**
 	 * Handles the SearchBar OnChange event
 	 * 
@@ -403,7 +403,7 @@ else if(OS_ANDROID){
  * Hide Bookmark Icon (Android)
  */
 $.wrapper.addEventListener("open", function onWindowOpen(){
-	if(OS_ANDROID && _args.restrictBookmarks){
+	if((OS_ANDROID || OS_WINDOWS) && _args.restrictBookmarks){
 		
 		var activity = $.wrapper.getActivity();
 		activity.onCreateOptionsMenu = function(e) {
