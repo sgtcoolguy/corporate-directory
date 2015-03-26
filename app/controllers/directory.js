@@ -259,7 +259,7 @@ var preprocessForListView = function(rawData) {
 		return {
 			template: isBookmark ? "favoriteTemplate" : "userTemplate",
 			properties: {
-				searchableText: item.name + ' ' + item.company + ' ' + item.email,
+				searchableText: item.firstName + ' ' + item.lastName + ' ' + item.company + ' ' + item.email,
 				user: item,
 			},
 			userName: {text: item.firstName+" "+item.lastName},
@@ -403,7 +403,7 @@ else if(OS_ANDROID || OS_WINDOWS){
  * Hide Bookmark Icon (Android)
  */
 $.wrapper.addEventListener("open", function onWindowOpen(){
-	if((OS_ANDROID || OS_WINDOWS) && _args.restrictBookmarks){
+	if(OS_ANDROID && _args.restrictBookmarks){
 		
 		var activity = $.wrapper.getActivity();
 		activity.onCreateOptionsMenu = function(e) {
