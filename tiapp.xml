@@ -13,6 +13,7 @@
     <analytics>true</analytics>
     <guid>11111111-1111-1111-1111-111111111111</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
+    <property name="ti.windows.publishername" type="string">CN=Appcelerator Inc.</property>
     <ios>
         <plist>
             <dict>
@@ -84,6 +85,14 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
+    <windows>
+        <manifest>
+            <Capabilities>
+                <Capability Name="internetClient"/>
+                <DeviceCapability Name="location"/>
+            </Capabilities>
+        </manifest>
+    </windows>
     <modules>
         <module platform="android">ti.map</module>
         <module platform="iphone">ti.map</module>
@@ -96,7 +105,7 @@
         <target device="mobileweb">true</target>
         <target device="windows">true</target>
     </deployment-targets>
-    <sdk-version>4.1.0.v20150325084816</sdk-version>
+    <sdk-version>4.1.0.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
